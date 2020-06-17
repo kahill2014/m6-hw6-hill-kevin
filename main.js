@@ -4,8 +4,12 @@ xmlhttp.onreadystatechange = function() {
         var apiResult = JSON.parse(this.responseText);
 
         // Add city name to header
-		
+		var cityNode = document.createTextNode(apiResult.name);
+		document.getElementById("city").appendChild(cityNode);
+
 		// Add weather description to main text
+		var weatherNode = document.createTextNode(apiResult.weather[0].description);
+		document.getElementById("weather-details").appendChild(weatherNode);
 
     }
 };
