@@ -22,8 +22,34 @@ header, main, footer {
 	min-width: 100%;
 	font-size: 1.25rem;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 h1 {
-	font-size: 1.75rem;
+	font-size: 2rem;
+	justify-content: center;
+}
+
+@media screen and (min-width: 720px) {
+	header, main, footer {
+		justify-content: flex-start;
+	}
+	h1 {
+		font-size: 2.75rem;
+	}
+	p {
+		font-size: 1.75rem;
+	}
+}
+
+@media screen and (min-width: 1080px) {
+	body {
+		padding-left: 4rem;
+	}
+	h1 {
+		font-size: 3.75rem;
+	}
+	p {
+		font-size: 2.25rem;
+	}
 }
